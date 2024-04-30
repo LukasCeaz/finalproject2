@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Inventory</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Inventory</h1>
+    <button onclick="window.location.href='/index'">View Forms</button>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th>Item Quantity</th>
+        </tr>
+        <% items.forEach(item => { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.item_name %></td>
+            <td><%= item.item_quantity %></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
